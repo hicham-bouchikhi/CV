@@ -10,7 +10,7 @@ if (!reduced.matches && 'IntersectionObserver' in window) {
   revealElements.forEach(element=>observer.observe(element));
   const showAll=()=>{if(reduced.matches){document.documentElement.classList.remove('motion-ready');observer.disconnect();}};
   reduced.addEventListener('change',showAll);
-  window.addEventListener('pagehide',()=>{observer.disconnect();reduced.removeEventListener('change',showAll);},{once:true});
+  window.addEventListener('pagehide',()=>{document.documentElement.classList.remove('motion-ready');observer.disconnect();reduced.removeEventListener('change',showAll);},{once:true});
 }
 
 const shell=document.querySelector<HTMLElement>('[data-scene]');
@@ -25,7 +25,7 @@ async function loadScene(){
 if(shell){
   const lazyScene=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){lazyScene.disconnect();void loadScene();}},{rootMargin:'150px'});
   lazyScene.observe(shell);
-  window.addEventListener('pagehide',()=>{tornDown=true;lazyScene.disconnect();disposeScene?.();},{once:true});
+  window.addEventListener('pagehide',()=>{tornDown=true;lazyScene.disconnect();disposeScene?.();});
   // pagehide cleans GPU resources even for bfcache; a restored page gets a fresh scene.
   window.addEventListener('pageshow',event=>{if(event.persisted){tornDown=false;void loadScene();}});
 }
