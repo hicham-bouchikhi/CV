@@ -1,17 +1,17 @@
 {
-  "name": "cv-website",
+  "name": "hicham-portfolio",
   "version": "1.0.0",
-  "description": "Modern CV/Portfolio Website with 3D animations",
-  "main": "index.html",
+  "description": "Portfolio de Hicham Bouchikhi — .NET, systèmes et outils open source",
+  "type": "module",
   "scripts": {
-    "start": "http-server -p 28080 -o",
-    "dev": "http-server -p 28080 -o",
-    "test": "echo \"No tests specified\" && exit 0"
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1"
   },
   "keywords": ["portfolio", "cv", "3d", "threejs"],
   "author": "Hicham Bouchikhi",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "astro": "7.1.3"
   }
 }

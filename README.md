@@ -1,3 +1,5 @@
+> **Refonte 2026 :** consulter [PORTFOLIO.md](PORTFOLIO.md) pour le nouveau portfolio Astro et son déploiement. Le contenu ci-dessous concerne l’ancien site.
+
 # 🚀 Modern CV - Interactive Portfolio Website Template
 
 A stunning, modern CV/portfolio website featuring breathtaking 3D animations, smooth scroll effects, glass-morphism design, and fully responsive layout. Perfect for developers, designers, and IT professionals looking to showcase their skills and experience.

@@ -1,0 +1,6 @@
+services:
+  portfolio:
+    build: .
+    image: hicham-portfolio:preview
+    ports:
+      - "127.0.0.1:28081:8080"

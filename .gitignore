@@ -3,7 +3,6 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 yarn.lock
 
 # Operating System
@@ -55,3 +54,7 @@ coverage/
 
 # Other
 *.orig
+
+.astro/
+
+node_modules
