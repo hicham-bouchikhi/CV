@@ -9,6 +9,7 @@ services:
       proxy:
         aliases:
           - portfolio-hicham
+          - cv-website
     security_opt:
       - no-new-privileges:true
     cap_drop:

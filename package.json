@@ -8,10 +8,15 @@
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1"
   },
-  "keywords": ["portfolio", "cv", "3d", "threejs"],
+  "keywords": [
+    "portfolio",
+    "cv",
+    "3d",
+    "threejs"
+  ],
   "author": "Hicham Bouchikhi",
   "license": "MIT",
   "devDependencies": {
-    "astro": "7.1.3"
+    "astro": "7.4.13"
   }
 }
