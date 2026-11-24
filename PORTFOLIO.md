@@ -1,8 +1,9 @@
 # Portfolio Hicham Bouchikhi
 
 Refonte Astro statique de `hicham.bouchikhi.net`. Français à `/`, anglais à `/en/`.
-Contenu : `src/data/content.ts`. Présentation : `src/components/Portfolio.astro`
-et `src/styles/global.css`. PDF : `public/cv/`.
+Contenu et expériences : `src/data/content.ts`. Références web et présentation :
+`src/components/Portfolio.astro`. Styles : `src/styles/global.css`. PDF : `public/cv/`.
+Scène 3D : `src/scripts/scene.ts`, chargée à la demande par `interactions.ts`.
 
 ## Développement
 
@@ -49,9 +50,23 @@ sur la branche `feat/portfolio-refonte`, poussée sur GitHub. Aucun Watchtower n
 Utiliser les instructions de ce fichier pour la refonte ; les autres guides
 du dépôt décrivent l’ancien site.
 
-## Limites de validation
+## Design et validation
 
-Compilation locale et Docker distant validés. Le contrôle visuel dans un navigateur
-reste à faire. Les miniatures sont des illustrations CSS, pas des captures des applications.
+Direction graphite / orange, scène Three.js avec objet métallique et réaction au
+pointeur, transitions au défilement et perspective sur les aperçus. Animation limitée
+à 30 fps, densité de pixels plafonnée et rendu suspendu hors écran ou en arrière-plan.
+Un bouton permet de mettre la scène en pause. La préférence de réduction des animations
+évite entièrement son chargement ; un visuel CSS reste disponible sans WebGL.
+
+Captures réelles des sites Emmanuelle Facchineri et Clinika Espoir, prises sur leurs
+pages publiques le 24 novembre 2026. Captures des applications reprises de leurs
+dépôts. Les interfaces Vortnux utilisent des données de démonstration. Images en WebP.
+Les références web sont présentées comme des contributions, sans revendiquer une
+réalisation exclusive.
+
+Compilation locale et Docker distant validés. Inspection visuelle en Chromium
+sur desktop et mobile ; version anglaise, préférence de mouvement réduit et largeur
+320 px vérifiées. Le navigateur partagé étant indisponible, les vérifications utilisent
+un navigateur headless isolé, sans intervenir dans les fenêtres de l’utilisateur.
 Le parcours reprend les sources locales et conserve « Aujourd’hui » chez Cegid
 sans inventer de date d’entrée. Les PDF proviennent du site local existant.
